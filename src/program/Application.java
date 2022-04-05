@@ -12,11 +12,8 @@ public class Application {
     public static void main(String[] args) {
         List<Product> list = new ArrayList<>();
 
-        Comparator<Product> comparator = new Comparator<Product>() {
-            @Override
-            public int compare(Product o1, Product o2) {
-                return o1.getName().toLowerCase().compareTo(o2.getName().toLowerCase());
-            }
+        Comparator<Product> comparator = (p1, p2) -> {
+            return p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
         };
 
         list.add(new Product("TV", 900.00));
@@ -30,4 +27,15 @@ public class Application {
             System.out.println(p);
         }
     }
+
+    //Classe Anonima
+//    Comparator<Product> comparator = new Comparator<Product>() {
+//        @Override
+//        public int compare(Product o1, Product o2) {
+//            return o1.getName().toLowerCase().compareTo(o2.getName().toLowerCase());
+//        }
+//    };
+
+
+
 }

@@ -12,9 +12,8 @@ public class Application {
     public static void main(String[] args) {
         List<Product> list = new ArrayList<>();
 
-        Comparator<Product> comparator = (p1, p2) -> {
-            return p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
-        };
+        Comparator<Product> comparator = (p1, p2) -> p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
+
 
         list.add(new Product("TV", 900.00));
         list.add(new Product("Notebook", 1200.00));
@@ -35,7 +34,10 @@ public class Application {
 //            return o1.getName().toLowerCase().compareTo(o2.getName().toLowerCase());
 //        }
 //    };
-
+    //Funcao Anonima  //Arrow Function
+//     Comparator<Product> comparator = (p1, p2) -> {
+//         return p1.getName().toLowerCase(Locale.ROOT).compareTo(p2.getName().toLowerCase(Locale.ROOT));
+//     };
 
 
 }

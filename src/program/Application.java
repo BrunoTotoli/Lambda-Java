@@ -12,7 +12,6 @@ public class Application {
         List<Product> list = new ArrayList<>();
 
 
-
         list.add(new Product("TV", 900.00));
         list.add(new Product("Notebook", 1200.00));
         list.add(new Product("Tablet", 450.00));
@@ -38,5 +37,7 @@ public class Application {
 //     };
     //Funcao Anonima em uma unica linha
 //    Comparator<Product> comparator = (p1, p2) -> p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
+    //Funcao anonima direto no argumento
+// list.sort((p1, p2) -> p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase()));
 
 }

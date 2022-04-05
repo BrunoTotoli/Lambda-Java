@@ -6,13 +6,11 @@ import entities.Product;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 
 public class Application {
     public static void main(String[] args) {
         List<Product> list = new ArrayList<>();
 
-        Comparator<Product> comparator = (p1, p2) -> p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
 
 
         list.add(new Product("TV", 900.00));
@@ -20,7 +18,7 @@ public class Application {
         list.add(new Product("Tablet", 450.00));
 
 
-        list.sort(comparator);
+        list.sort((p1, p2) -> p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase()));
 
         for (Product p : list) {
             System.out.println(p);
@@ -38,6 +36,7 @@ public class Application {
 //     Comparator<Product> comparator = (p1, p2) -> {
 //         return p1.getName().toLowerCase(Locale.ROOT).compareTo(p2.getName().toLowerCase(Locale.ROOT));
 //     };
-
+    //Funcao Anonima em uma unica linha
+//    Comparator<Product> comparator = (p1, p2) -> p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
 
 }

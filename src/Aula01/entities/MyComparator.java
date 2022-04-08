@@ -1,7 +1,6 @@
-package entities;
+package Aula01.entities;
 
 import java.util.Comparator;
-import java.util.Locale;
 
 public class MyComparator implements Comparator<Product> {
     @Override

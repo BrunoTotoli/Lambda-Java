@@ -1,4 +1,4 @@
-package entities;
+package Aula02.entities;
 
 public class Product {
     private String name;
